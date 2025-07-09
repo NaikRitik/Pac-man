@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <h1 class="neon-text">PAC-MAN</h1>
+        <p class="subtitle">Classic Arcade Game</p>
+        <button id="start-button" class="neon-button">START GAME</button>
+        <div class="instructions">
+            <p>Use Arrow Keys or W/S/A/D to move</p>
+            <p>Eat dots and avoid ghosts!</p>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <span id="score">Score: 0</span>
+            <span id="high-score">High Score: 0</span>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+        <h2 class="neon-text">GAME OVER</h2>
+        <p class="final-score">Final Score: <span id="final-score">0</span></p>
+        <p class="high-score">High Score: <span id="final-high-score">0</span></p>
+        <button id="restart-button" class="neon-button">PLAY AGAIN</button>
+    </div>
+
+    <footer class="game-footer">
+        <p>© 2025 BallPlay Arcade | Made with 💛 by Ritik Naik</p>
+    </footer>
+
+    <!-- Scanline effect overlay -->
+    <div class="scanline"></div>
+
+    <script src="constants.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
